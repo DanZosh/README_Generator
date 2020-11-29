@@ -1,3 +1,4 @@
 node_modules
 hidden_resources/
 .gitignore
+.DS_Store
