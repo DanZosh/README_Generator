@@ -1,15 +1,46 @@
 // array of questions for user
 const questions = [
-    "0. WHAT IS YOUR NAME, punk", 
-    "1. WHAT IS YOUR EMAIL ADDRESS",
-    "2. WHAT IS YOUR PROJECT'S NAME",
-    "3. PLEASE WRITE A SHORT DESCRIPTION OF YOUR PROJECT", 
-    "4. WHAT COMMAND SHOULD BE RUN TO INSTALL DEPENDENCIES (NPM I)",
-    "5. WHAT COMMAND SHOULD BE RUN TO RUN TESTS (NPM TEST)",
-    "6. WHAT DOES THE USER NEED TO KNOW ABOUT USING THE REPO?",
-    "7. WHAT DOES THE USER NEED TO KNOW ABOUT CONTRIBUTING TO THE REPO",
-
-];
+    {
+        type: 'input',
+        name: 'name',
+        message: '0. WHAT IS YOUR NAME',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: '1. WHAT IS YOUR EMAIL ADDRESS',
+    },
+    {
+        type: 'input',
+        name: 'projName',
+        message: '2. WHAT IS YOUR PROJECT NAME',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: '3. PLEASE WRITE A SHORT DESCRIPTION OF YOUR PROJECT',
+    },
+    {
+        type: 'input',
+        name: 'dependencies',
+        message: '4. WHAT COMMAND SHOULD BE RUN TO INSTALL DEPENDENCIES (NPM I)',
+    },
+    {
+        type: 'input',
+        name: 'dependencies',
+        message: '5. WHAT COMMAND SHOULD BE RUN TO RUN TESTS (NPM TEST)',
+    },
+    {
+        type: 'input',
+        name: 'dependencies',
+        message: '6. WHAT DOES THE USER NEED TO KNOW ABOUT USING THE REPO?',
+    },
+    {
+        type: 'input',
+        name: 'dependencies',
+        message: '7. WHAT DOES THE USER NEED TO KNOW ABOUT CONTRIBUTING TO THE REPO',
+    },
+]
     // console.log(questions[0])
 
 //REQUIRED MODULES
@@ -18,27 +49,11 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // function to write README file
-
+//Youre missing the writetoFile function provided in the develop folder here. that would basically be my inquirer
 
 inquirer
-    .prompt([
-    {
-        type: 'input',
-        name: 'question0',
-        message: `${questions[0]}`,
-    },
-    {
-        type: 'input',
-        name: 'question1',
-        message: `${questions[1]}`,
-    },
-    ]).then((data) => {
-        console.log(data)
-    //DELETE THE JUNK BELOW
-        // function writeToFile(fileName, data) {
-        //     fs.writeFile('test.txt', data, (err))
-        // }
-    //DELETE THE JUNK ABOVE
+    .prompt(questions).then((data) => {
+            console.log(data)
         fs.writeFile('test.json', JSON.stringify(data), (err) => {
             err?
             console.log('failed to write file'):
@@ -57,9 +72,9 @@ init();
 
 
 
-//RESOURCES BELOW
+// RESOURCES BELOW
 
-    //ATTEMPT WITH A FOR LOOP
+    // ATTEMPT WITH A FOR LOOP
 // for (let i = 0; i < questions.length; i++) {
 //     const element = questions[i];
     

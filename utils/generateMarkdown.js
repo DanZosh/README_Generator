@@ -7,6 +7,7 @@ function generateMarkdown(data) {
   ## Table of Contents
 
   *[Installation](#installation)
+  /*insert something liek data.qustion[0]....*/
 
   *[Usage](#usage)
 
@@ -26,10 +27,10 @@ function generateDescription (description){
   ${description}`;
 }
 
-console.log(generateMarkdown({
-  title: "testing",
-  description:"Testing description"
-}));
+// console.log(generateMarkdown({
+//   title: "testing",
+//   description:"Testing description"
+// }));
 
 
 module.exports = generateMarkdown;
