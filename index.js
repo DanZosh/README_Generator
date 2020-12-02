@@ -2,43 +2,53 @@
 const questions = [
     {
         type: 'input',
-        name: 'name',
-        message: '0. WHAT IS YOUR NAME',
+        name: 'promptTitle',
+        message: '0. WHAT IS YOUR PROJECT TITLE?',
     },
     {
         type: 'input',
-        name: 'email',
-        message: '1. WHAT IS YOUR EMAIL ADDRESS',
+        name: 'promptDescription',
+        message: '1. BRIEFLY DESCRIBE YOUR PROJECT',
     },
     {
         type: 'input',
-        name: 'projName',
-        message: '2. WHAT IS YOUR PROJECT NAME',
+        name: 'promptInstall',
+        message: '2. HOW DOES ONE INSTALL THIS APPLICATION',
     },
     {
         type: 'input',
-        name: 'description',
-        message: '3. PLEASE WRITE A SHORT DESCRIPTION OF YOUR PROJECT',
+        name: 'promptUsage',
+        message: '3. HOW DOES ONE USE THIS APPLICATION',
     },
     {
         type: 'input',
-        name: 'dependencies',
-        message: '4. WHAT COMMAND SHOULD BE RUN TO INSTALL DEPENDENCIES (NPM I)',
+        name: 'promptContribution',
+        message: '4. HOW DOES ONE CONTRIBUTE TO THIS APPLICATION',
     },
     {
         type: 'input',
-        name: 'dependencies',
-        message: '5. WHAT COMMAND SHOULD BE RUN TO RUN TESTS (NPM TEST)',
+        name: 'promptTest',
+        message: '5. HOW DOES ONE TEST THE APPLICATION',
     },
     {
         type: 'input',
-        name: 'dependencies',
-        message: '6. WHAT DOES THE USER NEED TO KNOW ABOUT USING THE REPO?',
+        name: 'promptLicense',
+        message: '6. WHAT LICENSE WOULD YOU LIKE TO USE',
     },
     {
         type: 'input',
-        name: 'dependencies',
-        message: '7. WHAT DOES THE USER NEED TO KNOW ABOUT CONTRIBUTING TO THE REPO',
+        name: 'promptUsername',
+        message: '7. WHAT IS YOUR GITHUB USERNAME',
+    },
+    {
+        type: 'input',
+        name: 'promptGithubLink',
+        message: '8. WHAT IS YOUR GITHUB LINK',
+    },
+    {
+        type: 'input',
+        name: 'promptEmail',
+        message: '9. WHAT IS YOUR EMAIL ADDRESS',
     },
 ]
     // console.log(questions[0])
@@ -54,7 +64,8 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 inquirer
     .prompt(questions).then((data) => {
             console.log(data)
-        fs.writeFile('test.json', JSON.stringify(data), (err) => {
+            generateMarkdown(data)
+        fs.writeFile(`${data.promptTitle}`'+.md', JSON.stringify(data), (err) => {
             err?
             console.log('failed to write file'):
             console.log('wrote file')

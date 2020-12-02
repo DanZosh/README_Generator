@@ -1,17 +1,17 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-  return `# ${data.title};
-  
-  ${generateDescription(data.description)}
+  return `
+  # ${data.promptTitle};
+
+  ### ${data.promptLicense}
   ## Table of Contents
 
+  *[Description](#description)
+
   *[Installation](#installation)
-  /*insert something liek data.qustion[0]....*/
 
   *[Usage](#usage)
-
-  *[License](#license)]
 
   *[Contributing](#contributing)
 
@@ -19,13 +19,41 @@ function generateMarkdown(data) {
 
   *[Questions](#questions)
 
+  *[License](#license)
+
+## Description:
+${data.promptDescription}
+
+## Installation:
+${data.promptInstall}
+
+## Usage:
+${data.promptUsage}
+
+## Contributing:
+${data.promptContribution}
+
+## Tests:
+${data.promptTest}
+
+## Questions:
+For questions, find the developer on GitHub at
+${data.promptUsername}
+${data.promptGithubLink}
+or at the email below
+${data.promptEmail}
+
+
+## Questions:
+This application is covered under a ${data.promptLicense} License.
+
 `;
 }
 
-function generateDescription (description){
-  return `## Description 
-  ${description}`;
-}
+// function generateDescription (description){
+//   return `## Description 
+//   ${description}`;
+// }
 
 // console.log(generateMarkdown({
 //   title: "testing",
