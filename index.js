@@ -31,9 +31,10 @@ const questions = [
         message: '5. HOW DOES ONE TEST THE APPLICATION',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'promptLicense',
         message: '6. WHAT LICENSE WOULD YOU LIKE TO USE',
+        choices:['none', 'Apache License 2.0','GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New or "Revised" license', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1']
     },
     {
         type: 'input',
