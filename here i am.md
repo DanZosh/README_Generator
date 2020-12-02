@@ -1,0 +1,1 @@
+{"promptTitle":"here i am","promptDescription":"its a readme generator","promptInstall":"in a meta way","promptUsage":"just pop it in the oven!","promptContribution":"carefully","promptTest":"also, carefully","promptLicense":"drivers for sure","promptUsername":"boop","promptGithubLink":"betty","promptEmail":"wow"}

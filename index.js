@@ -63,9 +63,10 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 
 inquirer
     .prompt(questions).then((data) => {
-            console.log(data)
-            generateMarkdown(data)
-        fs.writeFile(`${data.promptTitle}`'+.md', JSON.stringify(data), (err) => {
+            // console.log(data)
+            const filename = `${data.promptTitle.toLowerCase().split(' ').join('')}.md`
+            const markdownContent = generateMarkdown(data)
+        fs.writeFile(filename, markdownContent, (err) => {
             err?
             console.log('failed to write file'):
             console.log('wrote file')
