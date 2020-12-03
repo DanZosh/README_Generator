@@ -1,7 +1,9 @@
 
-  # how to eat something;
+  # hayooooooo bddldbd
 
-  ### d
+  ![badge](https://img.shields.io/badge/license-BSD_3-Clause_"New_or_"Revised"_license-orange)
+  
+
   ## Table of Contents
 
   *[Description](#description)
@@ -19,28 +21,28 @@
   *[License](#license)
 
 ## Description:
-it eats
+oiupupui
 
 ## Installation:
-idk
+papparazi
 
 ## Usage:
-carefully
+gaga
 
 ## Contributing:
-boastfully
+heyo
 
 ## Tests:
-proudly
+barvo
 
 ## Questions:
 For questions, find the developer on GitHub at
-d
-d
+lklklk
+beyp
 or at the email below
-d
+lpl
 
 
 ## Questions:
-This application is covered under a d License.
+This application is covered under a BSD_3-Clause_"New_or_"Revised"_license License.
 

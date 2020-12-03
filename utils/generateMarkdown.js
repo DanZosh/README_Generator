@@ -2,9 +2,11 @@
 function generateMarkdown(data) {
 
   return `
-  # ${data.promptTitle};
+  # ${data.promptTitle}
 
-  ### ${data.promptLicense}
+  ![badge](https://img.shields.io/badge/license-${data.promptLicense}-orange)
+  
+
   ## Table of Contents
 
   *[Description](#description)

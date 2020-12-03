@@ -34,7 +34,19 @@ const questions = [
         type: 'list',
         name: 'promptLicense',
         message: '6. WHAT LICENSE WOULD YOU LIKE TO USE',
-        choices:['none', 'Apache License 2.0','GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New or "Revised" license', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1']
+        choices:[
+            'none',
+            'Apache_License_2.0','GNU_General_Public_License_v3.0',
+            'MIT_License',
+            'BSD_2-Clause_"Simplified"_License',
+            'BSD_3-Clause_"New_or_"Revised"_license',
+            'Boost_Software_License_1.0',
+            'Creative_Commons_Zero_v1.0_Universal',
+            'Eclipse_Public_License_2.0',
+            'GNU_Affero_General_Public_License_v3.0',
+            'GNU_General_Public_License_v2.0',
+            'GNU_Lesser_General_Public_License_v2.1'
+        ]
     },
     {
         type: 'input',
