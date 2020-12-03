@@ -4,8 +4,8 @@ function generateMarkdown(data) {
   return `
   # ${data.promptTitle}
 
-  ![badge](https://img.shields.io/badge/license-${data.promptLicense}-orange)
-  
+  ![badge](https://img.shields.io/badge/license-${data.promptLicense}-ff69b4)
+
 
   ## Table of Contents
 
