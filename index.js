@@ -3,37 +3,37 @@ const questions = [
     {
         type: 'input',
         name: 'promptTitle',
-        message: '0. WHAT IS YOUR PROJECT TITLE?',
+        message: '1. WHAT IS YOUR PROJECT TITLE?',
     },
     {
         type: 'input',
         name: 'promptDescription',
-        message: '1. BRIEFLY DESCRIBE YOUR PROJECT',
+        message: '2. BRIEFLY DESCRIBE YOUR PROJECT',
     },
     {
         type: 'input',
         name: 'promptInstall',
-        message: '2. HOW DOES ONE INSTALL THIS APPLICATION',
+        message: '3. HOW DOES ONE INSTALL THIS APPLICATION',
     },
     {
         type: 'input',
         name: 'promptUsage',
-        message: '3. HOW DOES ONE USE THIS APPLICATION',
+        message: '4. HOW DOES ONE USE THIS APPLICATION',
     },
     {
         type: 'input',
         name: 'promptContribution',
-        message: '4. HOW DOES ONE CONTRIBUTE TO THIS APPLICATION',
+        message: '5. HOW DOES ONE CONTRIBUTE TO THIS APPLICATION',
     },
     {
         type: 'input',
         name: 'promptTest',
-        message: '5. HOW DOES ONE TEST THE APPLICATION',
+        message: '6. HOW DOES ONE TEST THE APPLICATION',
     },
     {
         type: 'list',
         name: 'promptLicense',
-        message: '6. WHAT LICENSE WOULD YOU LIKE TO USE',
+        message: '7. WHAT LICENSE WOULD YOU LIKE TO USE',
         choices:[
             'none',
             'Apache_License_2.0','GNU_General_Public_License_v3.0',
@@ -51,17 +51,22 @@ const questions = [
     {
         type: 'input',
         name: 'promptUsername',
-        message: '7. WHAT IS YOUR GITHUB USERNAME',
+        message: '8. WHAT IS YOUR GITHUB USERNAME',
     },
     {
         type: 'input',
         name: 'promptGithubLink',
-        message: '8. WHAT IS YOUR GITHUB LINK',
+        message: '9. WHAT IS YOUR GITHUB LINK',
     },
     {
         type: 'input',
         name: 'promptEmail',
-        message: '9. WHAT IS YOUR EMAIL ADDRESS',
+        message: '10. WHAT IS YOUR EMAIL ADDRESS',
+    },
+    {
+        type: 'input',
+        name: 'promptLink',
+        message: '11. WOULD YOU LIKE TO INCLUDE ANY LINKS',
     },
 ]
     // console.log(questions[0])
@@ -77,7 +82,8 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 inquirer
     .prompt(questions).then((data) => {
             // console.log(data)
-            const filename = './hidden_resources/trashReadMe/'+`${data.promptTitle.toLowerCase().split(' ').join('')}.md`
+            // const filename = './hidden_resources/trashReadMe/'+`${data.promptTitle.toLowerCase().split(' ').join('')}.md`
+            const filename = `./${data.promptTitle.toLowerCase().split(' ').join('')}.md`
             const markdownContent = generateMarkdown(data)
         fs.writeFile(filename, markdownContent, (err) => {
             err?
@@ -92,59 +98,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-
-
-
-// RESOURCES BELOW
-
-    // ATTEMPT WITH A FOR LOOP
-// for (let i = 0; i < questions.length; i++) {
-//     const element = questions[i];
-    
-    
-
-// inquirer
-//     .prompt(
-//     {
-//         type: 'input',
-//         name: 'name',
-//         message: `${questions[i]}`,
-//     }
-//     ).then((data) => {
-//         const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-    
-//         fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-//         err ? 
-//         console.log(err) : 
-//         console.log('Success!')
-//         );
-//         });
-// }
-
-    //STOCK FROM EXERCISE 20
-// inquirer
-//     .prompt([
-//     {
-//         type: 'checkbox',
-//         message: 'What languages do you know?',
-//         name: 'stack',
-//         choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-//     },
-//     {
-//         type: 'list',
-//         message: 'What is your preferred method of communication?',
-//         name: 'contact',
-//         choices: ['email', 'phone', 'telekinesis'],
-//     },
-//     ])
-    // .then((data) => {
-    // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-    // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-    // err ? 
-    // console.log(err) : 
-    // console.log('Success!')
-    // );
-    // });

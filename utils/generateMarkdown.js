@@ -23,6 +23,8 @@ function generateMarkdown(data) {
 
   *[License](#license)
 
+  *[Links](#links)
+
 ## Description:
 ${data.promptDescription}
 
@@ -46,21 +48,15 @@ or at the email below
 ${data.promptEmail}
 
 
-## Questions:
-This application is covered under a ${data.promptLicense} License.
+## License:
+This application is covered under the following license: ${data.promptLicense}.
+
+## Links:
+See below for a list of helpful links:
+${data.promptLicense} License.
 
 `;
 }
-
-// function generateDescription (description){
-//   return `## Description 
-//   ${description}`;
-// }
-
-// console.log(generateMarkdown({
-//   title: "testing",
-//   description:"Testing description"
-// }));
 
 
 module.exports = generateMarkdown;
