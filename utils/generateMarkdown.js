@@ -53,7 +53,7 @@ This application is covered under the following license: ${data.promptLicense}.
 
 ## Links:
 See below for a list of helpful links:
-${data.promptLicense} License.
+${data.promptLink}
 
 `;
 }
