@@ -85,11 +85,7 @@ inquirer
             // const filename = './hidden_resources/trashReadMe/'+`${data.promptTitle.toLowerCase().split(' ').join('')}.md`
             const filename = `./${data.promptTitle.toLowerCase().split(' ').join('')}.md`
             const markdownContent = generateMarkdown(data)
-        fs.writeFile(filename, markdownContent, (err) => {
-            err?
-            console.log('failed to write file'):
-            console.log('wrote file')
-        })
+
 });
 
 // function to initialize program
